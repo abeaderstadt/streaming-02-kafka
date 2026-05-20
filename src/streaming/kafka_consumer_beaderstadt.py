@@ -199,6 +199,22 @@ def process_message(row: dict[str, Any]) -> dict[str, Any]:
         The same row.
     """
     LOG.info("Processing raw message.")
+
+    # --- derived field (total_price) ---
+    quantity = float(row["quantity"])
+    unit_price = float(row["unit_price"])
+    row["total_price"] = quantity * unit_price
+
+    # --- derived field (order channel label) ---
+    is_online = row.get("is_online")
+
+    row["order_channel"] = (
+        "online" if str(is_online).lower() in ["true", "1", "yes"] else "in_store"
+    )
+
+    # tagging
+    row["processed_by"] = "beaderstadt_consumer"
+
     return row
 
 

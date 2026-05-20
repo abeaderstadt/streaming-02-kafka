@@ -1,4 +1,16 @@
-currency_code,customer_id,customer_note,datetime,device_type,discount_code,is_new_customer,is_online,order_id,payment_method,product_id,quantity,referral_source,region_id,unit_price,_kafka_key,_kafka_partition,_kafka_offset
-USD,CUST-4150,Gift for my team,2026-05-04T08:11:00Z,tablet,,false,true,e7324981-a9f0-419f-b708-d0a333451fff,paypal,PY-STREAM-005,3,paid_search,US-TX,59.99,US-TX,0,0
-USD,CUST-1106,Gift for my team,2026-05-04T08:23:00Z,mobile,,false,true,d61943e0-f543-4b5f-9c9a-18605ea4cfe5,paypal,PY-DATA-002,1,paid_search,US-TX,49.99,US-TX,0,1
-CAD,CUST-2133,Learning at my own pace,2026-05-04T08:28:00Z,desktop,,false,true,14da1915-8e74-47be-9e10-f7275d31af46,paypal,PY-NLP-006,1,organic,CA-QC,54.99,CA-QC,0,2
+currency_code,customer_id,customer_note,datetime,device_type,discount_code,is_new_customer,is_online,order_id,payment_method,product_id,quantity,referral_source,region_id,unit_price,_kafka_key,_kafka_partition,_kafka_offset,total_price,order_channel,processed_by
+USD,CUST-4150,Gift for my team,2026-05-04T08:11:00Z,tablet,,false,true,e7324981-a9f0-419f-b708-d0a333451fff,paypal,PY-STREAM-005,3,paid_search,US-TX,59.99,US-TX,0,0,179.97,online,beaderstadt_consumer
+USD,CUST-1106,Gift for my team,2026-05-04T08:23:00Z,mobile,,false,true,d61943e0-f543-4b5f-9c9a-18605ea4cfe5,paypal,PY-DATA-002,1,paid_search,US-TX,49.99,US-TX,0,1,49.99,online,beaderstadt_consumer
+CAD,CUST-2133,Learning at my own pace,2026-05-04T08:28:00Z,desktop,,false,true,14da1915-8e74-47be-9e10-f7275d31af46,paypal,PY-NLP-006,1,organic,CA-QC,54.99,CA-QC,0,2,54.99,online,beaderstadt_consumer
+USD,CUST-5333,Highly recommend,2026-05-04T08:40:00Z,mobile,,false,true,d77ed935-9b28-431d-bc25-0a3fd98f4154,paypal,PY-STREAM-005,1,organic,US-CA,59.99,US-CA,0,3,59.99,online,beaderstadt_consumer
+USD,CUST-8573,Learning at my own pace,2026-05-04T08:41:00Z,mobile,,false,true,24b91995-25f8-4ad7-8fa6-2e4c15750e5e,apple_pay,PY-VIZ-003,1,paid_search,US-MO,39.99,US-MO,0,4,39.99,online,beaderstadt_consumer
+CAD,CUST-8062,,2026-05-04T08:54:00Z,tablet,,false,true,1ec0fc8b-998c-4f43-8a66-19e1fa7d5fa8,paypal,PY-SQL-004,1,organic,CA-ON,44.99,CA-ON,0,5,44.99,online,beaderstadt_consumer
+CAD,CUST-9348,For my study group,2026-05-04T09:07:00Z,desktop,,false,false,392dd49b-b385-499c-9b4a-a38387fa39ae,credit_card,PY-INTRO-001,1,paid_search,CA-ON,29.99,CA-ON,0,6,29.99,in_store,beaderstadt_consumer
+USD,CUST-5889,,2026-05-04T09:15:00Z,tablet,,false,true,02782ab7-dd7d-4ebe-8abc-ef81cdc4193b,paypal,PY-VIZ-003,1,organic,US-CA,39.99,US-CA,0,7,39.99,online,beaderstadt_consumer
+CAD,CUST-4770,Excellent content,2026-05-04T09:19:00Z,desktop,,false,true,67bd3492-cc96-429a-9a91-1b4d2132d261,credit_card,PY-VIZ-003,1,paid_search,CA-ON,39.99,CA-ON,0,8,39.99,online,beaderstadt_consumer
+MXN,CUST-6168,,2026-05-04T09:37:00Z,desktop,,false,true,0a021628-6937-4876-8875-b00c07a39e0f,paypal,PY-DATA-002,1,organic,MX-CMX,49.99,MX-CMX,0,9,49.99,online,beaderstadt_consumer
+USD,CUST-3340,Recommended by a colleague,2026-05-04T09:42:00Z,tablet,,false,true,b05fc600-a5fc-4826-934c-cc1f188b0715,credit_card,PY-DATA-002,3,organic,US-MO,49.99,US-MO,0,10,149.97,online,beaderstadt_consumer
+USD,CUST-8668,,2026-05-04T10:06:00Z,mobile,,false,true,03d437fb-6966-47ad-a67a-728630c8b3f8,apple_pay,PY-INTRO-001,1,email,US-MO,29.99,US-MO,0,11,29.99,online,beaderstadt_consumer
+USD,CUST-2827,Learning at my own pace,2026-05-04T10:15:00Z,tablet,,false,true,6914aea4-448f-4dc1-b68f-0fe4a2c06188,credit_card,PY-DATA-002,1,organic,US-TX,49.99,US-TX,0,12,49.99,online,beaderstadt_consumer
+USD,CUST-4295,For my study group,2026-05-04T10:16:00Z,desktop,,false,false,e1adb233-3aa8-4d60-9684-1ddf52e9d656,paypal,PY-STREAM-005,5,organic,US-MO,59.99,US-MO,0,13,299.95,in_store,beaderstadt_consumer
+USD,CUST-8953,For my study group,2026-05-04T10:30:00Z,desktop,,false,true,80e9a9ea-9add-4d51-981a-d26aaacd4dc9,credit_card,PY-DATA-002,1,social,US-MO,49.99,US-MO,0,14,49.99,online,beaderstadt_consumer
