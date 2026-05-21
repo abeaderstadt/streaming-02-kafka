@@ -61,6 +61,11 @@ Describe the small technical changes you made.
 
 Include at least one Phase 4 change and one Phase 5 application.
 
+- Phase 4 changes made to consumer:
+- calculated total_price by multiplying quantity and unit_price.
+- added an order_channel field based on is_online, labeling each order as either “online” or “in_store.”
+- added a processed_by tag set to "beaderstadt_consumer" to identify my custom consumer output.
+
 ### Results
 
 Describe what happened when you ran the producer and consumer.

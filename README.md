@@ -250,11 +250,23 @@ To make this project my own, I #TODO
 
 ### Phase 4: Make a Technical Modification
 
-1. #TODO
+1. Changes made to consumer:
+   - calculated total_price by multiplying quantity and unit_price.
+   - added an order_channel field based on is_online, labeling each order as either “online” or “in_store.”
+   - added a processed_by tag set to "beaderstadt_consumer" to identify my custom consumer output.
+2. Changes made to .env file:
+
+- increased PRODUCER_MESSAGE_COUNT to 15 so I could see the streaming behavior with more messages.
+- updated KAFKA_GROUP_ID to streaming-consumer-group-beaderstadt
+ so my consumer runs independently from the example setup.
 
 ### Observations
 
-1. #TODO
+1. I saw 16 rows in my custom output file (including the header).
+2. The output now has three new columns: total_price, order_channel,
+and processed_by, which confirms my transformations worked correctly.
+3. These changes helped me see how the consumer can be used to transform
+raw data into a more useful output before writing it to the final CSV file.
 
 ### Phase 5: Apply the Skills to a New Problem
 
