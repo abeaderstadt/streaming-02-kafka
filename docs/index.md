@@ -62,7 +62,7 @@ transforms the fields, and sends each transformed record as an individual Kafka 
 
 The Kafka topic used for streaming was:
 
-- streaming-02-kafka-case
+- streaming-02-kafka-beaderstadt
 
 The message key used by my producer was the state value from each order record.
 This allowed related records from the same state to share a Kafka key.
