@@ -148,7 +148,16 @@ def transform_superstore_row(row: dict[str, str]) -> dict[str, Any]:
         "payment_method": "card",
         "referral_source": "superstore_dataset",
         "discount_percentage": str(row.get("Discount", "")),
-        "customer_note": "",
+        "customer_note": random.choice(
+            [
+                "",
+                "repeat customer",
+                "requested fast shipping",
+                "bulk office order",
+                "promo applied",
+                "gift purchase",
+            ]
+        ),
     }
 
 
