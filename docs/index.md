@@ -23,69 +23,158 @@ to get these projects running on your machine.
 
 ### Dataset
 
-Describe the dataset used by your Kafka producer.
+For this project, I updated my Kafka producer to use a modified
+version of the Superstore Dataset from Kaggle instead of the original sales.csv file.
 
+Dataset source:
 <https://www.kaggle.com/datasets/vivek468/superstore-dataset-final>
 
-Include:
+The dataset file used in my project is:
 
-- the name of the dataset file
-- what kind of records it contains
-- which fields are included in each record
-- whether you used the original sales dataset or modified it
+- sample_superstore.csv
+
+This dataset contains retail sales transaction records from a fictional
+superstore business. Each row represents a customer order and includes information
+related to products, customers, sales totals, shipping details, discounts, and regions.
+
+Some of the fields included in the dataset are:
+
+- Order ID
+- Order Date
+- Ship Mode
+- Customer ID
+- State
+- Product ID
+- Sales
+- Quantity
+- Discount
+- Profit
+
+I did not directly stream the raw dataset as is. Instead, I modified the
+producer to transform the dataset fields so they matched the schema expected by my Kafka pipeline.
+
+---
 
 ### Kafka Messages
 
-Describe the messages sent through Kafka.
+My Kafka producer reads rows from the sample_superstore.csv dataset,
+transforms the fields, and sends each transformed record as an individual Kafka message.
 
-Include:
+The Kafka topic used for streaming was:
 
-- what your producer sends
-- which Kafka topic you used
-- what message key you used, if any
-- whether you changed the message fields
+- streaming-02-kafka-case
+
+The message key used by my producer was the state value from each order record.
+This allowed related records from the same state to share a Kafka key.
+
+Some fields from the original dataset were transformed or
+generated to fit my streaming schema. For example:
+
+- unit_price was calculated using Sales ÷ Quantity
+- is_online was generated based on Ship Mode
+- currency_code was set to "USD"
+- customer_note values were randomly generated
+- is_new_customer values were randomly assigned as True or False
+
+---
 
 ### Consumer Processing
 
-Describe what your consumer receives and does with each message.
+My Kafka consumer receives the transformed sales messages from
+the Kafka topic and processes them one record at a time.
 
-Include:
+The consumer was configured to consume up to 15 messages during testing.
 
-- what your consumer receives from Kafka
-- how many messages it consumes
-- what it logs or prints
-- if it writes records to a CSV file
-- if it processes or filters selected fields (be specific)
+As messages were consumed, the consumer:
+
+- logged the incoming records
+- processed selected fields
+- wrote the transformed records to a custom CSV output file named:
+  - consumed_sales_beaderstadt.csv
+
+The consumer also added several new derived fields:
+
+- total_price
+  - calculated by multiplying quantity and unit_price
+- order_channel
+  - labeled orders as either "online" or "in_store" based on the is_online field
+- processed_by
+  - added a custom tag identifying my consumer as "beaderstadt_consumer"
+
+The consumer preserved the original transformed dataset fields while also appending
+Kafka metadata such as:
+
+- _kafka_key
+- _kafka_partition
+- _kafka_offset
+
+---
 
 ### Experiments
 
-Describe the small technical changes you made.
+For Phase 4, I customized the consumer processing logic by adding several new transformations.
 
-Include at least one Phase 4 change and one Phase 5 application.
+Phase 4 changes made to consumer:
 
-- Phase 4 changes made to consumer:
-- calculated total_price by multiplying quantity and unit_price.
-- added an order_channel field based on is_online, labeling each order as either “online” or “in_store.”
-- added a processed_by tag set to "beaderstadt_consumer" to identify my custom consumer output.
+- calculated total_price by multiplying quantity and unit_price
+- added an order_channel field based on is_online, labeling each order as either "online" or "in_store"
+- added a processed_by tag set to "beaderstadt_consumer" to identify my custom consumer output
+
+I also updated my .env file by:
+
+- increasing PRODUCER_MESSAGE_COUNT to 15
+- updating KAFKA_GROUP_ID to streaming-consumer-group-beaderstadt
+  so my consumer ran independently from the example setup
+
+For Phase 5, I applied the streaming workflow to a completely new dataset.
+
+Phase 5 changes:
+
+- replaced the original sales.csv dataset with a modified version of the Superstore Dataset
+- mapped the new dataset columns to match my Kafka pipeline schema
+- generated synthetic customer_note values using random selections
+- generated random boolean values for is_new_customer
+- transformed Sales and Quantity into a calculated unit_price field
+- added a referral_source field set to "superstore_dataset"
+
+---
 
 ### Results
 
-Describe what happened when you ran the producer and consumer.
+After running my custom producer and consumer pipeline:
 
-- After running my custom pipeline, I saw 16 rows in my custom output file (including the header).
-- The output now has three new columns: total_price, order_channel,
-and processed_by, which confirms my transformations worked correctly.
+- I saw 16 rows in my custom output file (including the header)
+- the producer successfully streamed transformed Superstore records through Kafka
+- the consumer correctly processed and enriched the incoming messages
+- the output file included my three custom derived fields:
+  - total_price
+  - order_channel
+  - processed_by
+- Kafka metadata fields were also successfully appended to each consumed record
+
+---
 
 ### Interpretation
 
-Explain what the Kafka streaming workflow showed you.
+This project helped me better understand how Kafka streaming
+pipelines can process and transform real-time data before writing
+it to a final output destination.
 
-Include:
+Compared to the original example project, I:
 
-- what changed from the original example
-- what you learned from watching messages move through Kafka
-- what the stream could tell a business or organization
-- what business intelligence was gained from the consumed messages
+- used a completely different dataset
+- transformed and mapped fields into a new schema
+- added custom derived fields in the consumer
+- generated synthetic data for fields that did not
+  exist in the original dataset
 
-- These changes helped me see how the consumer can be used to transform
-raw data into a more useful output before writing it to the final CSV file.
+Watching messages move through Kafka helped me understand how producers
+and consumers communicate through topics and how data can be enriched during processing.
+
+This stream could help a business monitor sales activity,
+customer purchasing behavior,online versus in-store orders,
+and transaction totals in real time.
+
+The consumed messages also demonstrated how business intelligence can be
+created directly within a streaming workflow by calculating metrics like total_price
+and categorizing order channels during processing.

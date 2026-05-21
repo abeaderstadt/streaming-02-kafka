@@ -246,7 +246,9 @@ to delete the topic and recreate it.
 
 ## My Project Modifications
 
-To make this project my own, I #TODO
+To make this project my own, I customized both the producer and consumer portions of the Kafka pipeline.
+I added new transformations in the consumer, updated environment variables to support independent
+streaming, and modified the producer to work with a completely new dataset from Kaggle.
 
 ### Phase 4: Make a Technical Modification
 
@@ -255,12 +257,11 @@ To make this project my own, I #TODO
    - added an order_channel field based on is_online, labeling each order as either “online” or “in_store.”
    - added a processed_by tag set to "beaderstadt_consumer" to identify my custom consumer output.
 2. Changes made to .env file:
+   - increased PRODUCER_MESSAGE_COUNT to 15 so I could see the streaming behavior with more messages.
+   - updated KAFKA_GROUP_ID to streaming-consumer-group-beaderstadt
+     so my consumer runs independently from the example setup.
 
-- increased PRODUCER_MESSAGE_COUNT to 15 so I could see the streaming behavior with more messages.
-- updated KAFKA_GROUP_ID to streaming-consumer-group-beaderstadt
- so my consumer runs independently from the example setup.
-
-### Observations
+### Phase 4: Observations
 
 1. I saw 16 rows in my custom output file (including the header).
 2. The output now has three new columns: total_price, order_channel,
@@ -270,7 +271,30 @@ raw data into a more useful output before writing it to the final CSV file.
 
 ### Phase 5: Apply the Skills to a New Problem
 
-1. #TODO Add documentation here
+1. I updated the producer to use a new Kaggle dataset called the Superstore Dataset.
+2. This provided a completely different set of sales data and demonstrated
+   how a Kafka pipeline can be adapted to work with new datasets.
+3. Kaggle dataset used:
+   - <https://www.kaggle.com/datasets/vivek468/superstore-dataset-final>
+4. I mapped the Superstore dataset columns to match the schema expected
+   by my Kafka pipeline.
+5. I generated synthetic customer_note values using random selections to
+   simulate realistic customer comments in the stream.
+6. I set referral_source to "superstore_dataset" to identify where
+   the streamed data originated from.
+7. I transformed fields such as unit_price, is_online, and discount_percentage
+   so the new dataset would work correctly with my existing producer and consumer pipeline.
+8. After the transformations, my derived columns total_price, order_channel,
+   and processed_by continued to work correctly with the new dataset.
+
+### Phase 5: Observations
+
+1. I successfully streamed and consumed the new Superstore dataset
+   using my modified Kafka pipeline.
+2. The transformed output file correctly included both the original
+   dataset values and my custom derived fields.
+3. This phase helped me better understand how streaming pipelines often require
+  schema mapping when integrating new datasets.
 
 ## Troubleshooting >>> or
 
