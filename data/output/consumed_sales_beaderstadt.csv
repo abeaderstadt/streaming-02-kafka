@@ -1,16 +1,16 @@
-currency_code,customer_id,customer_note,datetime,device_type,discount_code,is_new_customer,is_online,order_id,payment_method,product_id,quantity,referral_source,region_id,unit_price,_kafka_key,_kafka_partition,_kafka_offset,total_price,order_channel,processed_by
-USD,CG-12520,,11/8/2016,desktop,0,0,1,CA-2016-152156,card,FUR-BO-10001798,2.0,superstore_dataset,Kentucky,130.98,Kentucky,0,0,261.96,online,beaderstadt_consumer
-USD,CG-12520,,11/8/2016,desktop,0,0,1,CA-2016-152156,card,FUR-CH-10000454,3.0,superstore_dataset,Kentucky,243.98000000000002,Kentucky,0,1,731.94,online,beaderstadt_consumer
-USD,DV-13045,,6/12/2016,desktop,0,0,1,CA-2016-138688,card,OFF-LA-10000240,2.0,superstore_dataset,California,7.31,California,0,2,14.62,online,beaderstadt_consumer
-USD,SO-20335,,10/11/2015,desktop,0.45,0,1,US-2015-108966,card,FUR-TA-10000577,5.0,superstore_dataset,Florida,191.5155,Florida,0,3,957.5775,online,beaderstadt_consumer
-USD,SO-20335,,10/11/2015,desktop,0.2,0,1,US-2015-108966,card,OFF-ST-10000760,2.0,superstore_dataset,Florida,11.184,Florida,0,4,22.368,online,beaderstadt_consumer
-USD,BH-11710,,6/9/2014,desktop,0,0,1,CA-2014-115812,card,FUR-FU-10001487,7.0,superstore_dataset,California,6.9799999999999995,California,0,5,48.86,online,beaderstadt_consumer
-USD,BH-11710,,6/9/2014,desktop,0,0,1,CA-2014-115812,card,OFF-AR-10002833,4.0,superstore_dataset,California,1.82,California,0,6,7.28,online,beaderstadt_consumer
-USD,BH-11710,,6/9/2014,desktop,0.2,0,1,CA-2014-115812,card,TEC-PH-10002275,6.0,superstore_dataset,California,151.192,California,0,7,907.152,online,beaderstadt_consumer
-USD,BH-11710,,6/9/2014,desktop,0.2,0,1,CA-2014-115812,card,OFF-BI-10003910,3.0,superstore_dataset,California,6.168,California,0,8,18.504,online,beaderstadt_consumer
-USD,BH-11710,,6/9/2014,desktop,0,0,1,CA-2014-115812,card,OFF-AP-10002892,5.0,superstore_dataset,California,22.98,California,0,9,114.9,online,beaderstadt_consumer
-USD,BH-11710,,6/9/2014,desktop,0.2,0,1,CA-2014-115812,card,FUR-TA-10001539,9.0,superstore_dataset,California,189.576,California,0,10,1706.184,online,beaderstadt_consumer
-USD,BH-11710,,6/9/2014,desktop,0.2,0,1,CA-2014-115812,card,TEC-PH-10002033,4.0,superstore_dataset,California,227.856,California,0,11,911.424,online,beaderstadt_consumer
-USD,AA-10480,,4/15/2017,desktop,0.2,0,1,CA-2017-114412,card,OFF-PA-10002365,3.0,superstore_dataset,North Carolina,5.184,North Carolina,0,12,15.552,online,beaderstadt_consumer
-USD,IM-15070,,12/5/2016,desktop,0.2,0,1,CA-2016-161389,card,OFF-BI-10003656,3.0,superstore_dataset,Washington,135.992,Washington,0,13,407.976,online,beaderstadt_consumer
-USD,HP-14815,,11/22/2015,desktop,0.8,0,1,US-2015-118983,card,OFF-AP-10002311,5.0,superstore_dataset,Texas,13.762,Texas,0,14,68.81,online,beaderstadt_consumer
+currency_code,customer_id,customer_note,datetime,device_type,discount_percentage,is_new_customer,is_online,order_id,payment_method,product_id,quantity,referral_source,state,unit_price,_kafka_key,_kafka_partition,_kafka_offset,total_price,order_channel,processed_by
+USD,CG-12520,,11/8/2016,desktop,0,True,True,CA-2016-152156,card,FUR-BO-10001798,2.0,superstore_dataset,Kentucky,130.98,Kentucky,0,0,261.96,online,beaderstadt_consumer
+USD,CG-12520,,11/8/2016,desktop,0,False,True,CA-2016-152156,card,FUR-CH-10000454,3.0,superstore_dataset,Kentucky,243.98000000000002,Kentucky,0,1,731.94,online,beaderstadt_consumer
+USD,DV-13045,,6/12/2016,desktop,0,True,True,CA-2016-138688,card,OFF-LA-10000240,2.0,superstore_dataset,California,7.31,California,0,2,14.62,online,beaderstadt_consumer
+USD,SO-20335,,10/11/2015,desktop,0.45,True,True,US-2015-108966,card,FUR-TA-10000577,5.0,superstore_dataset,Florida,191.5155,Florida,0,3,957.5775,online,beaderstadt_consumer
+USD,SO-20335,,10/11/2015,desktop,0.2,True,True,US-2015-108966,card,OFF-ST-10000760,2.0,superstore_dataset,Florida,11.184,Florida,0,4,22.368,online,beaderstadt_consumer
+USD,BH-11710,,6/9/2014,desktop,0,True,True,CA-2014-115812,card,FUR-FU-10001487,7.0,superstore_dataset,California,6.9799999999999995,California,0,5,48.86,online,beaderstadt_consumer
+USD,BH-11710,,6/9/2014,desktop,0,True,True,CA-2014-115812,card,OFF-AR-10002833,4.0,superstore_dataset,California,1.82,California,0,6,7.28,online,beaderstadt_consumer
+USD,BH-11710,,6/9/2014,desktop,0.2,False,True,CA-2014-115812,card,TEC-PH-10002275,6.0,superstore_dataset,California,151.192,California,0,7,907.152,online,beaderstadt_consumer
+USD,BH-11710,,6/9/2014,desktop,0.2,True,True,CA-2014-115812,card,OFF-BI-10003910,3.0,superstore_dataset,California,6.168,California,0,8,18.504,online,beaderstadt_consumer
+USD,BH-11710,,6/9/2014,desktop,0,False,True,CA-2014-115812,card,OFF-AP-10002892,5.0,superstore_dataset,California,22.98,California,0,9,114.9,online,beaderstadt_consumer
+USD,BH-11710,,6/9/2014,desktop,0.2,False,True,CA-2014-115812,card,FUR-TA-10001539,9.0,superstore_dataset,California,189.576,California,0,10,1706.184,online,beaderstadt_consumer
+USD,BH-11710,,6/9/2014,desktop,0.2,True,True,CA-2014-115812,card,TEC-PH-10002033,4.0,superstore_dataset,California,227.856,California,0,11,911.424,online,beaderstadt_consumer
+USD,AA-10480,,4/15/2017,desktop,0.2,True,True,CA-2017-114412,card,OFF-PA-10002365,3.0,superstore_dataset,North Carolina,5.184,North Carolina,0,12,15.552,online,beaderstadt_consumer
+USD,IM-15070,,12/5/2016,desktop,0.2,True,True,CA-2016-161389,card,OFF-BI-10003656,3.0,superstore_dataset,Washington,135.992,Washington,0,13,407.976,online,beaderstadt_consumer
+USD,HP-14815,,11/22/2015,desktop,0.8,True,True,US-2015-118983,card,OFF-AP-10002311,5.0,superstore_dataset,Texas,13.762,Texas,0,14,68.81,online,beaderstadt_consumer

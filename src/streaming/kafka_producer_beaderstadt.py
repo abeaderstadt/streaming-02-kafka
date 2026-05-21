@@ -23,6 +23,7 @@ Terminal command to run this file from the root project folder:
 from collections.abc import Generator
 import os
 from pathlib import Path
+import random
 import time
 from typing import Any, Final
 
@@ -111,10 +112,10 @@ def verify_connection(settings: KafkaSettings) -> None:
 def get_message_key(message: dict[str, Any]) -> str:
     """Return the Kafka message key for a sale record."""
     try:
-        return str(message["region_id"])
+        return str(message["state"])
     except KeyError as error:
         msg = missing_csv_field_message(
-            field="region_id",
+            field="state",
             available_fields=list(message.keys()),
         )
         raise KeyError(msg) from error
@@ -133,20 +134,20 @@ def transform_superstore_row(row: dict[str, str]) -> dict[str, Any]:
     return {
         "order_id": row["Order ID"],
         "datetime": row["Order Date"],
-        "region_id": row["State"],
+        "state": row["State"],
         "currency_code": "USD",
         "product_id": row["Product ID"],
         "unit_price": unit_price,
         "quantity": quantity,
         # simulate streaming field
-        "is_online": 1 if ship_mode in ["Standard Class", "Second Class"] else 0,
+        "is_online": ship_mode in ["Standard Class", "Second Class"],
         "customer_id": row["Customer ID"],
-        "is_new_customer": 0,
-        # synthetic fields (needed to match your schema)
+        "is_new_customer": random.choice([True, False]),
+        # synthetic fields (needed to match the schema)
         "device_type": "desktop",
         "payment_method": "card",
         "referral_source": "superstore_dataset",
-        "discount_code": str(row.get("Discount", "")),
+        "discount_percentage": str(row.get("Discount", "")),
         "customer_note": "",
     }
 
