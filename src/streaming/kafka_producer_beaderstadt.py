@@ -61,7 +61,7 @@ MESSAGE_INTERVAL_SECONDS: Final[float] = float(msg_interval_seconds)
 
 ROOT_DIR: Final[Path] = Path.cwd()
 DATA_DIR: Final[Path] = ROOT_DIR / "data"
-SALES_CSV: Final[Path] = DATA_DIR / "sales.csv"
+SALES_CSV: Final[Path] = DATA_DIR / "sample_superstore.csv"
 
 
 # ==========================================================
@@ -120,10 +120,43 @@ def get_message_key(message: dict[str, Any]) -> str:
         raise KeyError(msg) from error
 
 
-def generate_messages(count: int) -> Generator[dict[str, str]]:
-    """Generate a stream of sales from the input CSV file."""
+def transform_superstore_row(row: dict[str, str]) -> dict[str, Any]:
+    """Convert Superstore format into Kafka pipeline schema."""
+    quantity = float(row["Quantity"])
+    sales = float(row["Sales"])
+
+    # avoid divide-by-zero just in case
+    unit_price = sales / quantity if quantity else 0
+
+    ship_mode = row.get("Ship Mode", "")
+
+    return {
+        "order_id": row["Order ID"],
+        "datetime": row["Order Date"],
+        "region_id": row["State"],
+        "currency_code": "USD",
+        "product_id": row["Product ID"],
+        "unit_price": unit_price,
+        "quantity": quantity,
+        # simulate streaming field
+        "is_online": 1 if ship_mode in ["Standard Class", "Second Class"] else 0,
+        "customer_id": row["Customer ID"],
+        "is_new_customer": 0,
+        # synthetic fields (needed to match your schema)
+        "device_type": "desktop",
+        "payment_method": "card",
+        "referral_source": "superstore_dataset",
+        "discount_code": str(row.get("Discount", "")),
+        "customer_note": "",
+    }
+
+
+def generate_messages(count: int) -> Generator[dict[str, Any]]:
+    """Generate transformed Superstore messages for Kafka."""
     sales_rows = read_csv_rows(SALES_CSV)
-    yield from sales_rows[:count]
+
+    for row in sales_rows[:count]:
+        yield transform_superstore_row(row)
 
 
 def send_messages(producer: Any, settings: KafkaSettings) -> int:

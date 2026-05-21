@@ -1311,3 +1311,509 @@
 2026-05-20 18:20:53 | INFO | C02 | ========================
 2026-05-20 18:20:53 | INFO | C02 | Consumer executed successfully!
 2026-05-20 18:20:53 | INFO | C02 | ========================
+2026-05-20 19:57:06 | DEBUG | P02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-20 19:57:06 | DEBUG | P02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-20 19:57:06 | DEBUG | P02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-20 19:57:06 | DEBUG | P02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-20 19:57:06 | DEBUG | P02 | PRODUCER_MESSAGE_COUNT            = 15
+2026-05-20 19:57:06 | DEBUG | P02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-20 19:57:06 | DEBUG | P02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-20 19:57:06 | DEBUG | P02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-20 19:57:06 | DEBUG | P02 | KAFKA_GROUP_ID                    = streaming-consumer-group-beaderstadt
+2026-05-20 19:57:06 | DEBUG | P02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-20 19:57:06 | DEBUG | P02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-20 19:57:06 | DEBUG | P02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-20 19:57:06 | INFO | P02 | === RUN START ===
+2026-05-20 19:57:06 | INFO | P02 | project=P02
+2026-05-20 19:57:06 | INFO | P02 | repo_dir=streaming-02-kafka
+2026-05-20 19:57:06 | INFO | P02 | python=3.14.3
+2026-05-20 19:57:06 | INFO | P02 | os=Windows 11
+2026-05-20 19:57:06 | INFO | P02 | shell=powershell
+2026-05-20 19:57:06 | INFO | P02 | cwd=.
+2026-05-20 19:57:06 | INFO | P02 | github_actions=False
+2026-05-20 19:57:06 | INFO | P02 | ========================
+2026-05-20 19:57:06 | INFO | P02 | START producer main()
+2026-05-20 19:57:06 | INFO | P02 | ========================
+2026-05-20 19:57:06 | INFO | P02 | ROOT_DIR = .
+2026-05-20 19:57:06 | INFO | P02 | DATA_DIR = data
+2026-05-20 19:57:06 | INFO | P02 | SALES_CSV = data\sample_superstore.csv
+2026-05-20 19:57:06 | INFO | P02 | ========================
+2026-05-20 19:57:06 | INFO | P02 | SECTION A. Acquire
+2026-05-20 19:57:06 | INFO | P02 | ========================
+2026-05-20 19:57:06 | INFO | P02 | Loading settings from .env...
+2026-05-20 19:57:06 | INFO | P02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-20 19:57:06 | INFO | P02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-20 19:57:06 | INFO | P02 | PRODUCER_MESSAGE_COUNT            = 15
+2026-05-20 19:57:06 | INFO | P02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2.0
+2026-05-20 19:57:06 | INFO | P02 | KAFKA_CLEAR_TOPIC_ON_START        = True
+2026-05-20 19:57:06 | INFO | P02 | Verifying Kafka connection...
+2026-05-20 19:57:06 | INFO | P02 | Kafka port is reachable.
+2026-05-20 19:57:07 | INFO | P02 | ========================
+2026-05-20 19:57:07 | INFO | P02 | SECTION P. Produce Messages
+2026-05-20 19:57:07 | INFO | P02 | ========================
+2026-05-20 19:57:07 | INFO | P02 | Sending messages...
+2026-05-20 19:57:07 | INFO | P02 | Sending up to 15 message(s) to topic 'streaming-02-kafka-case'.
+2026-05-20 19:57:07 | INFO | P02 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-20 19:57:07 | ERROR | P02 | 'utf-8' codec can't decode byte 0xa0 in position 2932: invalid start byte
+2026-05-20 19:57:07 | ERROR | P02 | Producer stopped before completing all messages.
+2026-05-20 20:01:32 | DEBUG | P02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-20 20:01:32 | DEBUG | P02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-20 20:01:32 | DEBUG | P02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-20 20:01:32 | DEBUG | P02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-20 20:01:32 | DEBUG | P02 | PRODUCER_MESSAGE_COUNT            = 15
+2026-05-20 20:01:32 | DEBUG | P02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-20 20:01:32 | DEBUG | P02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-20 20:01:32 | DEBUG | P02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-20 20:01:32 | DEBUG | P02 | KAFKA_GROUP_ID                    = streaming-consumer-group-beaderstadt
+2026-05-20 20:01:32 | DEBUG | P02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-20 20:01:32 | DEBUG | P02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-20 20:01:32 | DEBUG | P02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-20 20:01:32 | INFO | P02 | === RUN START ===
+2026-05-20 20:01:32 | INFO | P02 | project=P02
+2026-05-20 20:01:32 | INFO | P02 | repo_dir=streaming-02-kafka
+2026-05-20 20:01:32 | INFO | P02 | python=3.14.3
+2026-05-20 20:01:32 | INFO | P02 | os=Windows 11
+2026-05-20 20:01:32 | INFO | P02 | shell=powershell
+2026-05-20 20:01:32 | INFO | P02 | cwd=.
+2026-05-20 20:01:32 | INFO | P02 | github_actions=False
+2026-05-20 20:01:32 | INFO | P02 | ========================
+2026-05-20 20:01:32 | INFO | P02 | START producer main()
+2026-05-20 20:01:32 | INFO | P02 | ========================
+2026-05-20 20:01:32 | INFO | P02 | ROOT_DIR = .
+2026-05-20 20:01:32 | INFO | P02 | DATA_DIR = data
+2026-05-20 20:01:32 | INFO | P02 | SALES_CSV = data\sample_superstore.csv
+2026-05-20 20:01:32 | INFO | P02 | ========================
+2026-05-20 20:01:32 | INFO | P02 | SECTION A. Acquire
+2026-05-20 20:01:32 | INFO | P02 | ========================
+2026-05-20 20:01:32 | INFO | P02 | Loading settings from .env...
+2026-05-20 20:01:32 | INFO | P02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-20 20:01:32 | INFO | P02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-20 20:01:32 | INFO | P02 | PRODUCER_MESSAGE_COUNT            = 15
+2026-05-20 20:01:32 | INFO | P02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2.0
+2026-05-20 20:01:32 | INFO | P02 | KAFKA_CLEAR_TOPIC_ON_START        = True
+2026-05-20 20:01:32 | INFO | P02 | Verifying Kafka connection...
+2026-05-20 20:01:32 | INFO | P02 | Kafka port is reachable.
+2026-05-20 20:01:35 | INFO | P02 | ========================
+2026-05-20 20:01:35 | INFO | P02 | SECTION P. Produce Messages
+2026-05-20 20:01:35 | INFO | P02 | ========================
+2026-05-20 20:01:35 | INFO | P02 | Sending messages...
+2026-05-20 20:01:35 | INFO | P02 | Sending up to 15 message(s) to topic 'streaming-02-kafka-case'.
+2026-05-20 20:01:35 | INFO | P02 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-20 20:01:35 | INFO | P02 | {
+  order_id: CA-2016-152156
+  datetime: 11/8/2016
+  region_id: Kentucky
+  currency_code: USD
+  product_id: FUR-BO-10001798
+  unit_price: 130.98
+  quantity: 2.0
+  is_online: 1
+  customer_id: CG-12520
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0
+  customer_note: 
+}
+2026-05-20 20:01:35 | INFO | P02 |   Sending message with key=Kentucky
+2026-05-20 20:01:35 | INFO | P02 |   MESSAGE SENT  sent=1
+2026-05-20 20:01:37 | INFO | P02 | {
+  order_id: CA-2016-152156
+  datetime: 11/8/2016
+  region_id: Kentucky
+  currency_code: USD
+  product_id: FUR-CH-10000454
+  unit_price: 243.98000000000002
+  quantity: 3.0
+  is_online: 1
+  customer_id: CG-12520
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0
+  customer_note: 
+}
+2026-05-20 20:01:37 | INFO | P02 |   Sending message with key=Kentucky
+2026-05-20 20:01:37 | INFO | P02 |   MESSAGE SENT  sent=2
+2026-05-20 20:01:39 | INFO | P02 | {
+  order_id: CA-2016-138688
+  datetime: 6/12/2016
+  region_id: California
+  currency_code: USD
+  product_id: OFF-LA-10000240
+  unit_price: 7.31
+  quantity: 2.0
+  is_online: 1
+  customer_id: DV-13045
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0
+  customer_note: 
+}
+2026-05-20 20:01:39 | INFO | P02 |   Sending message with key=California
+2026-05-20 20:01:39 | INFO | P02 |   MESSAGE SENT  sent=3
+2026-05-20 20:01:41 | INFO | P02 | {
+  order_id: US-2015-108966
+  datetime: 10/11/2015
+  region_id: Florida
+  currency_code: USD
+  product_id: FUR-TA-10000577
+  unit_price: 191.5155
+  quantity: 5.0
+  is_online: 1
+  customer_id: SO-20335
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0.45
+  customer_note: 
+}
+2026-05-20 20:01:41 | INFO | P02 |   Sending message with key=Florida
+2026-05-20 20:01:41 | INFO | P02 |   MESSAGE SENT  sent=4
+2026-05-20 20:01:43 | INFO | P02 | {
+  order_id: US-2015-108966
+  datetime: 10/11/2015
+  region_id: Florida
+  currency_code: USD
+  product_id: OFF-ST-10000760
+  unit_price: 11.184
+  quantity: 2.0
+  is_online: 1
+  customer_id: SO-20335
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0.2
+  customer_note: 
+}
+2026-05-20 20:01:43 | INFO | P02 |   Sending message with key=Florida
+2026-05-20 20:01:43 | INFO | P02 |   MESSAGE SENT  sent=5
+2026-05-20 20:01:45 | INFO | P02 | {
+  order_id: CA-2014-115812
+  datetime: 6/9/2014
+  region_id: California
+  currency_code: USD
+  product_id: FUR-FU-10001487
+  unit_price: 6.9799999999999995
+  quantity: 7.0
+  is_online: 1
+  customer_id: BH-11710
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0
+  customer_note: 
+}
+2026-05-20 20:01:45 | INFO | P02 |   Sending message with key=California
+2026-05-20 20:01:45 | INFO | P02 |   MESSAGE SENT  sent=6
+2026-05-20 20:01:47 | INFO | P02 | {
+  order_id: CA-2014-115812
+  datetime: 6/9/2014
+  region_id: California
+  currency_code: USD
+  product_id: OFF-AR-10002833
+  unit_price: 1.82
+  quantity: 4.0
+  is_online: 1
+  customer_id: BH-11710
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0
+  customer_note: 
+}
+2026-05-20 20:01:47 | INFO | P02 |   Sending message with key=California
+2026-05-20 20:01:47 | INFO | P02 |   MESSAGE SENT  sent=7
+2026-05-20 20:01:49 | INFO | P02 | {
+  order_id: CA-2014-115812
+  datetime: 6/9/2014
+  region_id: California
+  currency_code: USD
+  product_id: TEC-PH-10002275
+  unit_price: 151.192
+  quantity: 6.0
+  is_online: 1
+  customer_id: BH-11710
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0.2
+  customer_note: 
+}
+2026-05-20 20:01:49 | INFO | P02 |   Sending message with key=California
+2026-05-20 20:01:49 | INFO | P02 |   MESSAGE SENT  sent=8
+2026-05-20 20:01:51 | INFO | P02 | {
+  order_id: CA-2014-115812
+  datetime: 6/9/2014
+  region_id: California
+  currency_code: USD
+  product_id: OFF-BI-10003910
+  unit_price: 6.168
+  quantity: 3.0
+  is_online: 1
+  customer_id: BH-11710
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0.2
+  customer_note: 
+}
+2026-05-20 20:01:51 | INFO | P02 |   Sending message with key=California
+2026-05-20 20:01:51 | INFO | P02 |   MESSAGE SENT  sent=9
+2026-05-20 20:01:53 | INFO | P02 | {
+  order_id: CA-2014-115812
+  datetime: 6/9/2014
+  region_id: California
+  currency_code: USD
+  product_id: OFF-AP-10002892
+  unit_price: 22.98
+  quantity: 5.0
+  is_online: 1
+  customer_id: BH-11710
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0
+  customer_note: 
+}
+2026-05-20 20:01:53 | INFO | P02 |   Sending message with key=California
+2026-05-20 20:01:53 | INFO | P02 |   MESSAGE SENT  sent=10
+2026-05-20 20:01:55 | INFO | P02 | {
+  order_id: CA-2014-115812
+  datetime: 6/9/2014
+  region_id: California
+  currency_code: USD
+  product_id: FUR-TA-10001539
+  unit_price: 189.576
+  quantity: 9.0
+  is_online: 1
+  customer_id: BH-11710
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0.2
+  customer_note: 
+}
+2026-05-20 20:01:55 | INFO | P02 |   Sending message with key=California
+2026-05-20 20:01:55 | INFO | P02 |   MESSAGE SENT  sent=11
+2026-05-20 20:01:57 | INFO | P02 | {
+  order_id: CA-2014-115812
+  datetime: 6/9/2014
+  region_id: California
+  currency_code: USD
+  product_id: TEC-PH-10002033
+  unit_price: 227.856
+  quantity: 4.0
+  is_online: 1
+  customer_id: BH-11710
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0.2
+  customer_note: 
+}
+2026-05-20 20:01:57 | INFO | P02 |   Sending message with key=California
+2026-05-20 20:01:57 | INFO | P02 |   MESSAGE SENT  sent=12
+2026-05-20 20:01:59 | INFO | P02 | {
+  order_id: CA-2017-114412
+  datetime: 4/15/2017
+  region_id: North Carolina
+  currency_code: USD
+  product_id: OFF-PA-10002365
+  unit_price: 5.184
+  quantity: 3.0
+  is_online: 1
+  customer_id: AA-10480
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0.2
+  customer_note: 
+}
+2026-05-20 20:01:59 | INFO | P02 |   Sending message with key=North Carolina
+2026-05-20 20:02:00 | INFO | P02 |   MESSAGE SENT  sent=13
+2026-05-20 20:02:02 | INFO | P02 | {
+  order_id: CA-2016-161389
+  datetime: 12/5/2016
+  region_id: Washington
+  currency_code: USD
+  product_id: OFF-BI-10003656
+  unit_price: 135.992
+  quantity: 3.0
+  is_online: 1
+  customer_id: IM-15070
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0.2
+  customer_note: 
+}
+2026-05-20 20:02:02 | INFO | P02 |   Sending message with key=Washington
+2026-05-20 20:02:02 | INFO | P02 |   MESSAGE SENT  sent=14
+2026-05-20 20:02:04 | INFO | P02 | {
+  order_id: US-2015-118983
+  datetime: 11/22/2015
+  region_id: Texas
+  currency_code: USD
+  product_id: OFF-AP-10002311
+  unit_price: 13.762
+  quantity: 5.0
+  is_online: 1
+  customer_id: HP-14815
+  is_new_customer: 0
+  device_type: desktop
+  payment_method: card
+  referral_source: superstore_dataset
+  discount_code: 0.8
+  customer_note: 
+}
+2026-05-20 20:02:04 | INFO | P02 |   Sending message with key=Texas
+2026-05-20 20:02:04 | INFO | P02 |   MESSAGE SENT  sent=15
+2026-05-20 20:02:06 | INFO | P02 | ========================
+2026-05-20 20:02:06 | INFO | P02 | SECTION E. Exit
+2026-05-20 20:02:06 | INFO | P02 | ========================
+2026-05-20 20:02:06 | INFO | P02 | Summary:
+2026-05-20 20:02:06 | INFO | P02 | Sent 15 message(s) to topic 'streaming-02-kafka-case'.
+2026-05-20 20:02:06 | INFO | P02 | ========================
+2026-05-20 20:02:06 | INFO | P02 | Producer executed successfully!
+2026-05-20 20:02:06 | INFO | P02 | ========================
+2026-05-20 20:02:29 | DEBUG | C02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-20 20:02:29 | DEBUG | C02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-20 20:02:29 | DEBUG | C02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-20 20:02:29 | DEBUG | C02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-20 20:02:29 | DEBUG | C02 | PRODUCER_MESSAGE_COUNT            = 15
+2026-05-20 20:02:29 | DEBUG | C02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-20 20:02:29 | DEBUG | C02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-20 20:02:29 | DEBUG | C02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-20 20:02:29 | DEBUG | C02 | KAFKA_GROUP_ID                    = streaming-consumer-group-beaderstadt
+2026-05-20 20:02:29 | DEBUG | C02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-20 20:02:29 | DEBUG | C02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-20 20:02:29 | DEBUG | C02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-20 20:02:29 | INFO | C02 | === RUN START ===
+2026-05-20 20:02:29 | INFO | C02 | project=C02
+2026-05-20 20:02:29 | INFO | C02 | repo_dir=streaming-02-kafka
+2026-05-20 20:02:29 | INFO | C02 | python=3.14.3
+2026-05-20 20:02:29 | INFO | C02 | os=Windows 11
+2026-05-20 20:02:29 | INFO | C02 | shell=powershell
+2026-05-20 20:02:29 | INFO | C02 | cwd=.
+2026-05-20 20:02:29 | INFO | C02 | github_actions=False
+2026-05-20 20:02:29 | INFO | C02 | ========================
+2026-05-20 20:02:29 | INFO | C02 | START consumer main()
+2026-05-20 20:02:29 | INFO | C02 | ========================
+2026-05-20 20:02:29 | INFO | C02 | ROOT_DIR = .
+2026-05-20 20:02:29 | INFO | C02 | DATA_DIR = data
+2026-05-20 20:02:29 | INFO | C02 | OUTPUT_CSV = data\output\consumed_sales_beaderstadt.csv
+2026-05-20 20:02:29 | INFO | C02 | ========================
+2026-05-20 20:02:29 | INFO | C02 | SECTION A. Acquire
+2026-05-20 20:02:29 | INFO | C02 | ========================
+2026-05-20 20:02:29 | INFO | C02 | Loading settings from .env...
+2026-05-20 20:02:29 | INFO | C02 | KAFKA_BOOTSTRAP_SERVERS  = localhost:9092
+2026-05-20 20:02:29 | INFO | C02 | KAFKA_TOPIC              = streaming-02-kafka-case
+2026-05-20 20:02:29 | INFO | C02 | KAFKA_GROUP_ID           = streaming-consumer-group-beaderstadt
+2026-05-20 20:02:29 | INFO | C02 | CONSUMER_TIMEOUT_SECONDS = 10.0
+2026-05-20 20:02:29 | INFO | C02 | CONSUMER_MAX_MESSAGES    = 1000
+2026-05-20 20:02:29 | INFO | C02 | Verifying Kafka connection...
+2026-05-20 20:02:29 | INFO | C02 | Kafka port is reachable.
+2026-05-20 20:02:29 | INFO | C02 | Verifying Kafka topic...
+2026-05-20 20:02:31 | INFO | C02 | Topic 'streaming-02-kafka-case' exists.
+2026-05-20 20:02:31 | INFO | C02 | Found 15 message(s) available.
+2026-05-20 20:02:31 | INFO | C02 | Creating Kafka consumer...
+2026-05-20 20:02:31 | INFO | C02 | Subscribed to topic: 'streaming-02-kafka-case' (reading from beginning)
+2026-05-20 20:02:31 | INFO | C02 | ========================
+2026-05-20 20:02:31 | INFO | C02 | SECTION C. Consume and Process Messages
+2026-05-20 20:02:31 | INFO | C02 | ========================
+2026-05-20 20:02:31 | INFO | C02 | Initializing output...
+2026-05-20 20:02:31 | INFO | C02 | Output CSV cleared: consumed_sales_beaderstadt.csv
+2026-05-20 20:02:31 | INFO | C02 | Consuming messages...
+2026-05-20 20:02:31 | INFO | C02 | Waiting for up to 1000 message(s).
+2026-05-20 20:02:31 | INFO | C02 | Press CTRL+C to stop early.
+
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'CG-12520', 'customer_note': '', 'datetime': '11/8/2016', 'device_type': 'desktop', 'discount_code': '0', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2016-152156', 'payment_method': 'card', 'product_id': 'FUR-BO-10001798', 'quantity': 2.0, 'referral_source': 'superstore_dataset', 'region_id': 'Kentucky', 'unit_price': 130.98, '_kafka_key': 'Kentucky', '_kafka_partition': 0, '_kafka_offset': 0}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=1
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'CG-12520', 'customer_note': '', 'datetime': '11/8/2016', 'device_type': 'desktop', 'discount_code': '0', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2016-152156', 'payment_method': 'card', 'product_id': 'FUR-CH-10000454', 'quantity': 3.0, 'referral_source': 'superstore_dataset', 'region_id': 'Kentucky', 'unit_price': 243.98000000000002, '_kafka_key': 'Kentucky', '_kafka_partition': 0, '_kafka_offset': 1}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=2
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'DV-13045', 'customer_note': '', 'datetime': '6/12/2016', 'device_type': 'desktop', 'discount_code': '0', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2016-138688', 'payment_method': 'card', 'product_id': 'OFF-LA-10000240', 'quantity': 2.0, 'referral_source': 'superstore_dataset', 'region_id': 'California', 'unit_price': 7.31, '_kafka_key': 'California', '_kafka_partition': 0, '_kafka_offset': 2}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=3
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'SO-20335', 'customer_note': '', 'datetime': '10/11/2015', 'device_type': 'desktop', 'discount_code': '0.45', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'US-2015-108966', 'payment_method': 'card', 'product_id': 'FUR-TA-10000577', 'quantity': 5.0, 'referral_source': 'superstore_dataset', 'region_id': 'Florida', 'unit_price': 191.5155, '_kafka_key': 'Florida', '_kafka_partition': 0, '_kafka_offset': 3}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=4
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'SO-20335', 'customer_note': '', 'datetime': '10/11/2015', 'device_type': 'desktop', 'discount_code': '0.2', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'US-2015-108966', 'payment_method': 'card', 'product_id': 'OFF-ST-10000760', 'quantity': 2.0, 'referral_source': 'superstore_dataset', 'region_id': 'Florida', 'unit_price': 11.184, '_kafka_key': 'Florida', '_kafka_partition': 0, '_kafka_offset': 4}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=5
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'BH-11710', 'customer_note': '', 'datetime': '6/9/2014', 'device_type': 'desktop', 'discount_code': '0', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2014-115812', 'payment_method': 'card', 'product_id': 'FUR-FU-10001487', 'quantity': 7.0, 'referral_source': 'superstore_dataset', 'region_id': 'California', 'unit_price': 6.9799999999999995, '_kafka_key': 'California', '_kafka_partition': 0, '_kafka_offset': 5}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=6
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'BH-11710', 'customer_note': '', 'datetime': '6/9/2014', 'device_type': 'desktop', 'discount_code': '0', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2014-115812', 'payment_method': 'card', 'product_id': 'OFF-AR-10002833', 'quantity': 4.0, 'referral_source': 'superstore_dataset', 'region_id': 'California', 'unit_price': 1.82, '_kafka_key': 'California', '_kafka_partition': 0, '_kafka_offset': 6}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=7
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'BH-11710', 'customer_note': '', 'datetime': '6/9/2014', 'device_type': 'desktop', 'discount_code': '0.2', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2014-115812', 'payment_method': 'card', 'product_id': 'TEC-PH-10002275', 'quantity': 6.0, 'referral_source': 'superstore_dataset', 'region_id': 'California', 'unit_price': 151.192, '_kafka_key': 'California', '_kafka_partition': 0, '_kafka_offset': 7}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=8
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'BH-11710', 'customer_note': '', 'datetime': '6/9/2014', 'device_type': 'desktop', 'discount_code': '0.2', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2014-115812', 'payment_method': 'card', 'product_id': 'OFF-BI-10003910', 'quantity': 3.0, 'referral_source': 'superstore_dataset', 'region_id': 'California', 'unit_price': 6.168, '_kafka_key': 'California', '_kafka_partition': 0, '_kafka_offset': 8}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=9
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'BH-11710', 'customer_note': '', 'datetime': '6/9/2014', 'device_type': 'desktop', 'discount_code': '0', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2014-115812', 'payment_method': 'card', 'product_id': 'OFF-AP-10002892', 'quantity': 5.0, 'referral_source': 'superstore_dataset', 'region_id': 'California', 'unit_price': 22.98, '_kafka_key': 'California', '_kafka_partition': 0, '_kafka_offset': 9}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=10
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'BH-11710', 'customer_note': '', 'datetime': '6/9/2014', 'device_type': 'desktop', 'discount_code': '0.2', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2014-115812', 'payment_method': 'card', 'product_id': 'FUR-TA-10001539', 'quantity': 9.0, 'referral_source': 'superstore_dataset', 'region_id': 'California', 'unit_price': 189.576, '_kafka_key': 'California', '_kafka_partition': 0, '_kafka_offset': 10}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=11
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'BH-11710', 'customer_note': '', 'datetime': '6/9/2014', 'device_type': 'desktop', 'discount_code': '0.2', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2014-115812', 'payment_method': 'card', 'product_id': 'TEC-PH-10002033', 'quantity': 4.0, 'referral_source': 'superstore_dataset', 'region_id': 'California', 'unit_price': 227.856, '_kafka_key': 'California', '_kafka_partition': 0, '_kafka_offset': 11}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=12
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'AA-10480', 'customer_note': '', 'datetime': '4/15/2017', 'device_type': 'desktop', 'discount_code': '0.2', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2017-114412', 'payment_method': 'card', 'product_id': 'OFF-PA-10002365', 'quantity': 3.0, 'referral_source': 'superstore_dataset', 'region_id': 'North Carolina', 'unit_price': 5.184, '_kafka_key': 'North Carolina', '_kafka_partition': 0, '_kafka_offset': 12}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=13
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'IM-15070', 'customer_note': '', 'datetime': '12/5/2016', 'device_type': 'desktop', 'discount_code': '0.2', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'CA-2016-161389', 'payment_method': 'card', 'product_id': 'OFF-BI-10003656', 'quantity': 3.0, 'referral_source': 'superstore_dataset', 'region_id': 'Washington', 'unit_price': 135.992, '_kafka_key': 'Washington', '_kafka_partition': 0, '_kafka_offset': 13}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=14
+2026-05-20 20:02:35 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'HP-14815', 'customer_note': '', 'datetime': '11/22/2015', 'device_type': 'desktop', 'discount_code': '0.8', 'is_new_customer': 0, 'is_online': 1, 'order_id': 'US-2015-118983', 'payment_method': 'card', 'product_id': 'OFF-AP-10002311', 'quantity': 5.0, 'referral_source': 'superstore_dataset', 'region_id': 'Texas', 'unit_price': 13.762, '_kafka_key': 'Texas', '_kafka_partition': 0, '_kafka_offset': 14}
+2026-05-20 20:02:35 | INFO | C02 | Processing raw message.
+2026-05-20 20:02:35 | INFO | C02 | MESSAGE CONSUMED
+2026-05-20 20:02:35 | INFO | C02 | consumed=15
+2026-05-20 20:02:45 | INFO | C02 | No message received within 10.0s timeout.
+2026-05-20 20:02:45 | INFO | C02 | Producer finished or paused. Stopping consumer.
+2026-05-20 20:02:45 | INFO | C02 | Kafka consumer closed.
+2026-05-20 20:02:45 | INFO | C02 | ========================
+2026-05-20 20:02:45 | INFO | C02 | SECTION E. Exit
+2026-05-20 20:02:45 | INFO | C02 | ========================
+2026-05-20 20:02:45 | INFO | C02 | Summary:
+2026-05-20 20:02:45 | INFO | C02 | Consumed 15 message(s) from topic 'streaming-02-kafka-case'.
+2026-05-20 20:02:45 | INFO | C02 | OUTPUT_CSV = data\output\consumed_sales_beaderstadt.csv
+2026-05-20 20:02:45 | INFO | C02 | ========================
+2026-05-20 20:02:45 | INFO | C02 | Consumer executed successfully!
+2026-05-20 20:02:45 | INFO | C02 | ========================

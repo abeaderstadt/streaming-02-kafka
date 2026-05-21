@@ -25,6 +25,8 @@ to get these projects running on your machine.
 
 Describe the dataset used by your Kafka producer.
 
+<https://www.kaggle.com/datasets/vivek468/superstore-dataset-final>
+
 Include:
 
 - the name of the dataset file
