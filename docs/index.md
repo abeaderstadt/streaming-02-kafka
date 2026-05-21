@@ -35,7 +35,7 @@ The dataset file used in my project is:
 
 This dataset contains retail sales transaction records from a fictional
 superstore business. Each row represents a customer order and includes information
-related to products, customers, sales totals, shipping details, discounts, and regions.
+related to products, customers, sales totals, shipping details, discounts, and locations.
 
 Some of the fields included in the dataset are:
 
@@ -166,15 +166,15 @@ Compared to the original example project, I:
 - transformed and mapped fields into a new schema
 - added custom derived fields in the consumer
 - generated synthetic data for fields that did not
-  exist in the original dataset
+  exist in the new dataset
 
 Watching messages move through Kafka helped me understand how producers
-and consumers communicate through topics and how data can be enriched during processing.
+and consumers communicate through topics and how data can be enhanced during processing.
 
 This stream could help a business monitor sales activity,
-customer purchasing behavior,online versus in-store orders,
+customer purchases, online versus in-store orders,
 and transaction totals in real time.
 
-The consumed messages also demonstrated how business intelligence can be
-created directly within a streaming workflow by calculating metrics like total_price
+The consumed messages also show how business intelligence can be
+created directly inside a streaming workflow by calculating metrics like total_price
 and categorizing order channels during processing.
