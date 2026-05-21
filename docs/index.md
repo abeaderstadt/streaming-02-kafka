@@ -70,6 +70,10 @@ Include at least one Phase 4 change and one Phase 5 application.
 
 Describe what happened when you ran the producer and consumer.
 
+- After running my custom pipeline, I saw 16 rows in my custom output file (including the header).
+- The output now has three new columns: total_price, order_channel,
+and processed_by, which confirms my transformations worked correctly.
+
 ### Interpretation
 
 Explain what the Kafka streaming workflow showed you.
@@ -80,3 +84,6 @@ Include:
 - what you learned from watching messages move through Kafka
 - what the stream could tell a business or organization
 - what business intelligence was gained from the consumed messages
+
+- These changes helped me see how the consumer can be used to transform
+raw data into a more useful output before writing it to the final CSV file.
