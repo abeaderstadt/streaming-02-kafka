@@ -33,7 +33,7 @@ The dataset file used in my project is:
 
 - sample_superstore.csv
 
-This dataset contains retail sales transaction records from a fictional
+This dataset contains sales records from a fictional
 superstore business. Each row represents a customer order and includes information
 related to products, customers, sales totals, shipping details, discounts, and locations.
 
@@ -58,17 +58,17 @@ producer to transform the dataset fields so they matched the schema expected by 
 ### Kafka Messages
 
 My Kafka producer reads rows from the sample_superstore.csv dataset,
-transforms the fields, and sends each transformed record as an individual Kafka message.
+transforms the fields, and sends each transformed record as a Kafka message.
 
 The Kafka topic used for streaming was:
 
 - streaming-02-kafka-beaderstadt
 
 The message key used by my producer was the state value from each order record.
-This allowed related records from the same state to share a Kafka key.
+Using this allowed related records from the same state to share a Kafka key.
 
-Some fields from the original dataset were transformed or
-generated to fit my streaming schema. For example:
+I ended up transforming a few fields and generating others
+so they fit my streaming schema. For example:
 
 - unit_price was calculated using Sales ÷ Quantity
 - is_online was generated based on Ship Mode
@@ -83,7 +83,7 @@ generated to fit my streaming schema. For example:
 My Kafka consumer receives the transformed sales messages from
 the Kafka topic and processes them one record at a time.
 
-The consumer was configured to consume up to 15 messages during testing.
+The consumer was set to consume up to 15 messages during testing.
 
 As messages were consumed, the consumer:
 
@@ -112,7 +112,7 @@ Kafka metadata such as:
 
 ### Experiments
 
-For Phase 4, I customized the consumer processing logic by adding several new transformations.
+For Phase 4, I customized the consumer logic by adding several new transformations.
 
 Phase 4 changes made to consumer:
 
@@ -124,7 +124,7 @@ I also updated my .env file by:
 
 - increasing PRODUCER_MESSAGE_COUNT to 15
 - updating KAFKA_GROUP_ID to streaming-consumer-group-beaderstadt
-  so my consumer ran independently from the example setup
+  so my consumer ran independently from the example
 
 For Phase 5, I applied the streaming workflow to a completely new dataset.
 
@@ -145,19 +145,18 @@ After running my custom producer and consumer pipeline:
 
 - I saw 16 rows in my custom output file (including the header)
 - the producer successfully streamed transformed Superstore records through Kafka
-- the consumer correctly processed and enriched the incoming messages
+- the consumer correctly processed and enhanced the incoming messages
 - the output file included my three custom derived fields:
   - total_price
   - order_channel
   - processed_by
-- Kafka metadata fields were also successfully appended to each consumed record
 
 ---
 
 ### Interpretation
 
-This project helped me better understand how Kafka streaming
-pipelines can process and transform real-time data before writing
+After working through this, I really began to understand how Kafka
+pipelines can be used to process and transform real-time data before writing
 it to a final output destination.
 
 Compared to the original example project, I:
@@ -168,13 +167,12 @@ Compared to the original example project, I:
 - generated synthetic data for fields that did not
   exist in the new dataset
 
-Watching messages move through Kafka helped me understand how producers
+Watching messages move through Kafka helped me visualize how producers
 and consumers communicate through topics and how data can be enhanced during processing.
 
-This stream could help a business monitor sales activity,
-customer purchases, online versus in-store orders,
-and transaction totals in real time.
+This stream could help a business monitor sales activity and
+customer purchases in real time.
 
 The consumed messages also show how business intelligence can be
 created directly inside a streaming workflow by calculating metrics like total_price
-and categorizing order channels during processing.
+and categorizing orders during processing.
